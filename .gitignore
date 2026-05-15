@@ -1,0 +1,16 @@
+# Ignore ROM files
+*.gbc
+*.gb
+*.zip
+
+# Ignore extracted asset dumps
+extractor/output/
+engine/Assets/Resources/Extracted/
+
+# Standard Unity & Python ignores
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+__pycache__/
+*.pyc
