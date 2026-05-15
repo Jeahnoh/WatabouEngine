@@ -69,28 +69,47 @@ def verify_and_parse_rom():
             # --- Step 3: Raw Data Print Test ---
             if is_valid_rom:
                 print("\n==================================================")
-                print("[+] DATA INSPECTOR: Reading Raw Monster Table Data")
+                print("[+] DATA INSPECTOR: Parsing True Monster Attributes")
                 print("==================================================")
                 
-                # Jump straight to the monster data block
                 rom.seek(monster_start)
                 
-                # Let's read enough data for the first 3 monsters to inspect
+                # Let's read the data for the first 3 monsters to inspect structural values
                 sample_size = record_size * 3
                 raw_bytes = rom.read(sample_size)
                 
-                print(f"[+] Successfully read {sample_size} bytes from the table area.\n")
-                
-                # Print them out broken down by monster record blocks
+                family_names = {
+                    0: "Slime", 1: "Dragon", 2: "Beast", 3: "Flying",
+                    4: "Plant", 5: "Bug",    6: "Devil", 7: "Zombie",
+                    8: "Material", 9: "Boss"
+                }
+
                 for i in range(3):
                     start_idx = i * record_size
                     end_idx = start_idx + record_size
                     monster_chunk = raw_bytes[start_idx:end_idx]
                     
-                    # Formats the bytes as clean hexadecimal pairs (e.g., "01 FF 34")
-                    hex_string = " ".join(f"{b:02X}" for b in monster_chunk)
-                    print(f"Monster #{i+1:03d} Raw Bytes:")
-                    print(f" -> {hex_string}\n")
+                    # Parse properties straight from the documentation offset array mapping
+                    family_id = monster_chunk[0]
+                    level_cap = monster_chunk[1]
+                    exp_index = monster_chunk[2]
+                    gender_ratio = monster_chunk[3]
+                    
+                    # Skills occupy offsets 0x06, 0x07, 0x08
+                    skill_1 = monster_chunk[6]
+                    skill_2 = monster_chunk[7]
+                    skill_3 = monster_chunk[8]
+                    
+                    family_string = family_names.get(family_id, f"Unknown ({family_id})")
+                    
+                    print(f"Monster #{i+1:03d} Properties:")
+                    print(f"  ├─ Calculated Family : {family_string}")
+                    print(f"  ├─ Base Level Cap    : {level_cap}")
+                    print(f"  ├─ Exp Table Index   : {exp_index}")
+                    print(f"  ├─ Gender Ratio Code : 0x{gender_ratio:02X}")
+                    print(f"  ├─ Base Skill Bytes  : [0x{skill_1:02X}, 0x{skill_2:02X}, 0x{skill_3:02X}]")
+                    print(f"  └─ Full Raw Row Link : {' '.join(f'{b:02X}' for b in monster_chunk[:16])}...\n")
+                    
                 print("==================================================")
 
     except Exception as e:
