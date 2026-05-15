@@ -21,7 +21,7 @@ def verify_and_parse_rom():
     record_size = int(rom_map["offsets"]["monster_record_bytes"], 16)
     monster_count = rom_map["offsets"]["monster_count"]
 
-    # Sanity print check requested by Jeahnoh
+    # Sanity print check
     print("\n==================================================")
     print("[+] SANITY CHECK: rom_map.json loaded successfully!")
     print(f"[+] Monster Table Start (Hex String): {rom_map['offsets']['monster_table_start']}")
