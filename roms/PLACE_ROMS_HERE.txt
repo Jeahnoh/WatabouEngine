@@ -1,0 +1,21 @@
+===========================================================================
+                      W A T A B O U   E N G I N E
+===========================================================================
+
+Drop your legally obtained Dragon Warrior Monsters (GBC) ROM file here!
+
+TECHNICAL NOTES FOR END-USERS:
+------------------------------
+1. File Name: You can leave the filename as whatever your dumping software 
+   spits out (e.g., "DWM.gbc", "dragon_warrior_monsters.gb", etc.). The 
+   extractor tool does not rely on filenames.
+   
+2. Verification: Upon startup, the engine will automatically parse the 
+   internal Game Boy ROM Header metadata and verify the global checksum to 
+   ensure it is a valid, uncorrupted version of the game.
+
+3. Supported Versions: The current Phase 1 extractor targets the North 
+   American (US) release of Dragon Warrior Monsters (GBC).
+
+Thank you for supporting clean-room engine recreation!
+===========================================================================

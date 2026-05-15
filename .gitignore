@@ -1,16 +1,37 @@
-# Ignore ROM files
+# =========================
+# Legal & Asset Protection
+# =========================
+# Ignore all ROM files
 *.gbc
 *.gb
+*.rom
 *.zip
 
-# Ignore extracted asset dumps
-extractor/output/
-engine/Assets/Resources/Extracted/
+# Ignore everything inside the roms folder...
+roms/*
+# ...Except for the instruction file so the folder survives
+!roms/PLACE_ROMS_HERE.txt
 
-# Standard Unity & Python ignores
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
+# Ignore all extracted copyrighted assets
+local_resources/
+extractor/output/
+# =========================
+# Python Tooling
+# =========================
 __pycache__/
 *.pyc
+.venv/
+env/
+
+# =========================
+# MonoGame Engine (C# / .NET)
+# =========================
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# MonoGame Content Builder ignores
+Content/bin/
+Content/obj/
