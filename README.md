@@ -2,6 +2,8 @@
 
 **Watabou Engine** is an open-source, clean-room engine recreation for the classic Game Boy Color monster-taming RPG, *Dragon Warrior Monsters* (1998). It serves as Phase 1 of a potential larger **Project Ruida** framework.
 
+**Developed and Maintained by:** [Jeahnoh](https://github.com/cdunlap-gravic)
+
 Built natively in C# using the **MonoGame** framework, this project aims to faithfully reconstruct the original turn-based combat, breeding mechanics, and exploration logic within a highly performant, modern environment, completely bypassing original hardware limitations.
 
 ## 🗺️ Project Roadmap: Mechanics vs. Aesthetics
