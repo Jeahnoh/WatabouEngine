@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "target_version": "US_GBC_1.0"
+  },
+  "offsets": {
+    "monster_table_start": "0x34A08",
+    "monster_record_bytes": "0x28",
+    "monster_count": 215
+  }
+}
