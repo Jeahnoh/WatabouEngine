@@ -13,8 +13,12 @@ roms/*
 !roms/PLACE_ROMS_HERE.txt
 
 # Ignore all extracted copyrighted assets
-local_resources/
+Assets/
 extractor/output/
+
+# Ignore references folder
+references/
+
 # =========================
 # Python Tooling
 # =========================

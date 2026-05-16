@@ -15,7 +15,8 @@ TECHNICAL NOTES FOR END-USERS:
    ensure it is a valid, uncorrupted version of the game.
 
 3. Supported Versions: The current Phase 1 extractor targets the North 
-   American (US) release of Dragon Warrior Monsters (GBC).
+   American (US) release of Dragon Warrior Monsters (GBC). 
+   [MD5: 1ca6579359f21d8e27b446f865bf6b83]
 
 Thank you for supporting clean-room engine recreation!
 ===========================================================================

@@ -1,10 +1,23 @@
 {
   "meta": {
-    "target_version": "US_GBC_1.0"
+    "target_version": "US_GBC_SGB_ENHANCED"
   },
   "offsets": {
     "monster_table_start": "0xC461",
     "monster_record_bytes": "0x2B",
-    "monster_count": 221
+    "monster_count": 221,
+    "monster_names_start": "0x105B1F"
+  },
+  "families": {
+    "0": "Slime",
+    "1": "Dragon",
+    "2": "Beast",
+    "3": "Flying",
+    "4": "Plant",
+    "5": "Bug",
+    "6": "Devil",
+    "7": "Zombie",
+    "8": "Material",
+    "9": "Boss"
   }
 }
