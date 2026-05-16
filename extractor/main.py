@@ -8,29 +8,19 @@ HEADER_TITLE_OFFSET = 0x0134
 HEADER_TITLE_LENGTH = 15
 
 def load_character_map(tbl_path):
-    """Dynamically loads a .tbl file into a hex-to-string Python dictionary."""
     char_map = {}
     if not os.path.exists(tbl_path):
-        print(f"[-] Warning: '{tbl_path}' missing.")
         return char_map
-
     with open(tbl_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip('\n')
             if '=' not in line:
                 continue
-            
             parts = line.split('=', 1)
             if len(parts) == 2:
                 hex_str, char_str = parts
-                try:
-                    char_map[int(hex_str, 16)] = char_str
-                except ValueError:
-                    continue
-                    
-    char_map[0x00] = ""
-    char_map[0x50] = ""
-    char_map[0xF0] = ""
+                char_map[int(hex_str, 16)] = char_str
+    
     return char_map
 
 def extract_variable_names(rom, start_offset, count, char_map):

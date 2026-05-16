@@ -5,11 +5,8 @@ import sqlite3
 DEBUG = True
 
 def load_character_map(tbl_path):
-    """Dynamically loads a .tbl file into a hex-to-string Python dictionary."""
     char_map = {}
     if not os.path.exists(tbl_path):
-        if DEBUG:
-            print(f"[-] Warning: '{tbl_path}' missing.")
         return char_map
     with open(tbl_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -19,13 +16,8 @@ def load_character_map(tbl_path):
             parts = line.split('=', 1)
             if len(parts) == 2:
                 hex_str, char_str = parts
-                try:
-                    char_map[int(hex_str, 16)] = char_str
-                except ValueError:
-                    continue
-    char_map[0x00] = ""
-    char_map[0x50] = ""
-    char_map[0xF0] = ""
+                char_map[int(hex_str, 16)] = char_str
+    
     return char_map
 
 def extract_variable_names(rom, start_offset, count, char_map):
@@ -48,10 +40,13 @@ def build_database():
     with open(json_path, "r") as f:
         rom_map = json.load(f)
 
+    # Load layout definitions from config map
     monster_start = int(rom_map["offsets"]["monster_table_start"], 16)
     record_size = int(rom_map["offsets"]["monster_record_bytes"], 16)
     monster_count = rom_map["offsets"]["monster_count"]
-    names_start = int(rom_map["offsets"]["monster_names_start"], 16)
+    monster_names_start = int(rom_map["offsets"]["monster_names_start"], 16)
+    skill_names_start = int(rom_map["offsets"]["skill_names_start"], 16)
+    skill_count = rom_map["offsets"]["skill_count"]
 
     # TODO: Locate in ROM actual text entries for family names
     config_families = rom_map["families"]
@@ -76,10 +71,10 @@ def build_database():
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    # Enable Foreign Key Constraints in SQLite
+    # Enforce database integrity rules
     cursor.execute("PRAGMA foreign_keys = ON;")
 
-    # Table 1: Master Lookup Table for Monster Families
+    # Master Lookup Table for Monster Families
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS families (
             family_id INTEGER PRIMARY KEY,
@@ -87,7 +82,15 @@ def build_database():
         );
     """)
 
-    # Table 2: Normalized Monster Entities Table
+    # Master Lookup Table for Globally Available Skills
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS skills (
+            skill_id INTEGER PRIMARY KEY,
+            skill_name TEXT NOT NULL
+        );
+    """)
+
+    # Normalized Monster Profile Table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS monsters (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -101,7 +104,10 @@ def build_database():
             skill_2_id INTEGER NOT NULL,
             skill_3_id INTEGER NOT NULL,
             raw_chunk BLOB NOT NULL,
-            FOREIGN KEY (family_id) REFERENCES families(family_id)
+            FOREIGN KEY (family_id) REFERENCES families(family_id),
+            FOREIGN KEY (skill_1_id) REFERENCES skills(skill_id),
+            FOREIGN KEY (skill_2_id) REFERENCES skills(skill_id),
+            FOREIGN KEY (skill_3_id) REFERENCES skills(skill_id)
         );
     """)
 
@@ -114,9 +120,31 @@ def build_database():
         with open(rom_path, "rb") as rom:
             char_map = load_character_map("extractor/dwm_english.tbl")
             
+            # Extract actual names up to our known text limit
             if DEBUG:
-                print("[+] Pre-loading variable-length game text strings...")
-            monster_names = extract_variable_names(rom, names_start, monster_count, char_map)
+                print(f"[+] Extracting {skill_count} global skill strings from cartridge context...")
+            extracted_skills = extract_variable_names(rom, skill_names_start, skill_count, char_map)
+            
+            # Populate the entire 256 byte spectrum (0x00 to 0xFF) to clear foreign key constraints safely
+            if DEBUG:
+                print("[+] Seeding complete 1-byte matrix lookup tables for core skills layer...")
+            for s_id in range(256):
+                if s_id < len(extracted_skills):
+                    # 0x00 to 0xDD: Actual strings from ROM (Blaze...Ahhh)
+                    s_name = extracted_skills[s_id]
+                elif s_id == 255:
+                    # 0xFF: The universal "No skill equipped" marker
+                    s_name = "Empty"
+                else:
+                    # 0xDE to 0xFE: Padding out unused dictionary space
+                    s_name = f"Unused_0x{s_id:02X}"
+                
+                cursor.execute("INSERT INTO skills (skill_id, skill_name) VALUES (?, ?);", (s_id, s_name))
+            
+            # Extract and inject all core monster records
+            if DEBUG:
+                print("[+] Pre-loading variable-length monster name strings...")
+            monster_names = extract_variable_names(rom, monster_names_start, monster_count, char_map)
 
             if DEBUG:
                 print(f"[+] Processing and injecting {monster_count} core entities into relational tables...")
@@ -147,7 +175,7 @@ def build_database():
                 ))
 
         conn.commit()
-        print(f"[SUCCESS] Relational compilation complete. {monster_count} core records written.")
+        print(f"[SUCCESS] Relational database compilation complete. Linked structural records successfully.")
 
     except Exception as e:
         print(f"[-] Pipeline Failure: {e}")

@@ -6,7 +6,9 @@
     "monster_table_start": "0xC461",
     "monster_record_bytes": "0x2B",
     "monster_count": 221,
-    "monster_names_start": "0x105B1F"
+    "monster_names_start": "0x105B1F",
+    "skill_names_start": "0x10628E",
+    "skill_count": 222
   },
   "families": {
     "0": "Slime",
