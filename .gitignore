@@ -19,6 +19,9 @@ extractor/output/
 # Ignore references folder
 references/
 
+# Ignore test scripts
+extractor/DONT_INCLUDE/
+
 # =========================
 # Python Tooling
 # =========================
