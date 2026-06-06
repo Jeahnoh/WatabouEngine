@@ -42,3 +42,4 @@ obj/
 # MonoGame Content Builder ignores
 Content/bin/
 Content/obj/
+docs/md_drafts/

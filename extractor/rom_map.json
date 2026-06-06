@@ -10,6 +10,7 @@
     "skill_names_start": "0x10628E",
     "skill_count": 222
   },
+  "_comment":"I now have an idea of where the parts are to abstract this",
   "families": {
     "0": "Slime",
     "1": "Dragon",
