@@ -2,9 +2,16 @@
 # Legal & Asset Protection
 # =========================
 # Ignore all ROM files
-*.gbc
+*.nes
+*.sfc
+*.smc
 *.gb
-*.rom
+*.gbc
+*.gba
+*.nds
+*.3ds
+*.7z
+*.rar
 *.zip
 
 # Ignore everything inside the roms folder...
@@ -43,3 +50,4 @@ obj/
 Content/bin/
 Content/obj/
 docs/md_drafts/
+rewrite/nice_session.log
