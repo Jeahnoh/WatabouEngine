@@ -51,3 +51,4 @@ Content/bin/
 Content/obj/
 docs/md_drafts/
 rewrite/nice_session.log
+rewrite/config.json
