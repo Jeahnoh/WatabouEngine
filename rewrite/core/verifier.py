@@ -60,7 +60,7 @@ def scan_rom_directory(target_dir: str, approved_hashes: dict) -> list:
             })
         else:
             # It's a Game Boy ROM, but not one we support. Log to debug, keep terminal clean.
-            logEMS(f"Ignored unsupported ROM: '{filename}'", LogLevel.DEBUG, echo=False)
+            logEMS(f"Ignored unsupported ROM: '{filename}'", LogLevel.DEBUG)
 
     # Final reporting logic based on your requirements
     if not valid_roms_found:

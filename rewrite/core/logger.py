@@ -15,10 +15,13 @@ from enum import Enum
 #================================================================
 # CONFIGURATION
 #================================================================
-LOG_FILE = "nice_session.log"
 VERSION = 'v0.0.3-etl'
 LAST_UPDATE = '2026-06-09'
 ENGINE = "Watabou"
+LOG_FILE = "nice_session.log"
+
+SILENT_MODE = False  # Set to True to suppress console output and log only to file
+DEBUG_MODE = False  # Set to True to enable verbose logging and diagnostics
 
 class LogLevel(Enum):
     INFO = "INFO"
@@ -26,10 +29,25 @@ class LogLevel(Enum):
     ERROR = "ERROR"
     DEBUG = "DEBUG"
 
+def set_silent_mode(is_silent: bool):
+    """Toggles the global silent state for terminal output."""
+    global SILENT_MODE
+    SILENT_MODE = bool(is_silent)
+    
+def set_debug_mode(is_debug: bool):
+    """Toggles the global debug state and announces the change if active."""
+    global DEBUG_MODE
+    DEBUG_MODE = is_debug
+    if DEBUG_MODE:
+        logEMS("Debug mode ENABLED. Extended tracing active.", LogLevel.DEBUG)
+
 def logEMS(message: str, level: LogLevel = LogLevel.INFO, echo: bool = True) -> str:
     """
     Writes a timestamped message to the log file and optionally prints it to the console.
     """
+    if level == LogLevel.DEBUG and not DEBUG_MODE:
+        return "" 
+
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     formatted_msg = f"{timestamp} [{level.value}] {message}"
     
@@ -42,7 +60,7 @@ def logEMS(message: str, level: LogLevel = LogLevel.INFO, echo: bool = True) -> 
         print(f"[LOGGING ERROR] Failed writing to file: {e}", file=sys.stderr)
 
     # Basic Console Echo
-    if echo:
+    if echo and not SILENT_MODE:
         stream = sys.stderr if level in (LogLevel.ERROR, LogLevel.WARN) else sys.stdout
         print(formatted_msg, file=stream)
     
@@ -64,7 +82,9 @@ def logAppHeader(engine_name: str = "NICE ETL Pipeline") -> None:
             f.write(f"\n{headerMsg}\n")
     except IOError:
         pass
-    print(headerMsg)
+    
+    if not SILENT_MODE:
+        print(headerMsg)
 
 def logAppFooter() -> None:
     """Writes a simple session end boundary to the log."""
@@ -77,14 +97,17 @@ def logAppFooter() -> None:
             f.write(f"{footerMsg}\n")
     except IOError:
         pass
-    print(footerMsg)
+
+    if not SILENT_MODE:
+        print(footerMsg)
 
 
 #================================================================
 # INITIALIZER
 #================================================================
-def initialize_logger(engine_name: str = "NICE ETL Pipeline"):
+def initialize_logger(engine_name: str = "NICE ETL Pipeline", silent: bool = False) -> None:
     """Registers the exit hook and prints the header."""
+    set_silent_mode(silent)
     # Guarantees the footer prints when sys.exit() is called or script finishes naturally
     atexit.register(logAppFooter)
     logAppHeader(engine_name)
