@@ -31,4 +31,3 @@ if __name__ == "__main__":
     # Check if --silent was passed as a command-line argument
     is_silent = "--silent" in sys.argv
     run_pipeline(silent=is_silent)
-
