@@ -91,5 +91,10 @@ sprite breakdown w/ headers examples
 * [ ] [Extraction step 1]
 
 [⬅️ Back to Master ROM Map](../DWM_Master_ROM_Map.md)
+---
+© 2026 Jeahnoh. Licensed under CC BY-NC 4.0. Attribution Required.
+See LICENSE.md in the repository root for full non-commercial terms.
+
+
 
 * I still need to decompress everything here to verify these are actually all THESE sprites

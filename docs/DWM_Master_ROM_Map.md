@@ -147,8 +147,7 @@ These Banks contain no useful data that is utilized in Dragon Warrior Monsters i
 | `7C` | `0x1F0000` | `0x1F3FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7C](./DWM_ROM_Maps/124_Bank_7C.md)    |
 | `7D` | `0x1F4000` | `0x1F7FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 7D](./DWM_ROM_Maps/125_Bank_7D.md)    |
 | `7E` | `0x1F8000` | `0x1FBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7E](./DWM_ROM_Maps/126_Bank_7E.md)    |
-| `7F` | `0x1FC000` | `0x1FFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7F](./DWM_ROM_Maps/127_Bank_7F.md)    |
+| `7F` | `0x1FC000` | `0x1FFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7F](./DWM_ROM_Maps/127_Bank_7F.md)    | 
 ---
-<p align="center"><sub><i>Thank you Ryuzac for the wealth of knowledge you shared with me! You gave me the tools to make this ROM mapping so much easier! Seriously, thank you so much!</i></sub></p>  
-
----
+© 2026 Jeahnoh. Licensed under CC BY-NC 4.0. Attribution Required.
+See LICENSE.md in the repository root for full non-commercial terms.

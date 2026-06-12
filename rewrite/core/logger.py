@@ -1,10 +1,18 @@
-"""
-Fork of:
-NEEDLESS IMMERSIVE COMMAND ENGINE (N.I.C.E.)
-Developed by Jeahnoh
-
-Stripped of main engine, using logging engine only.
-"""
+# Copyright (c) 2026 Jeahnoh
+# This software is licensed under the PolyForm Noncommercial License 1.0.0.
+# You may not use this file except in compliance with the License.
+# See LICENSE.md in the repository root for full terms.
+#
+# -----------------------------------------------------------------------------
+# PRIOR ART / ORIGINAL AUTHORSHIP:
+# Fork of the NEEDLESS IMMERSIVE COMMAND ENGINE (N.I.C.E.)
+# Originally developed and copyrighted by Jeahnoh prior to this project.
+#
+# Note: This version has been stripped of the main command engine and 
+# modified to utilize the logging framework exclusively. Future 
+# contributions to this specific file by other developers do not 
+# constitute co-ownership of the original N.I.C.E. architecture.
+# -----------------------------------------------------------------------------
 
 # Standard Library Imports
 import sys
