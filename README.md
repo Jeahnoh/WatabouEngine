@@ -6,7 +6,7 @@
 
 At its bare bones, the primary goal is to rebuild the original game as a 1:1 PC port experience. Beyond that, the intention is to offer modern enhancements (inspired by LADXHD) and eventually a highly customizable "HD Modern" mode, pulling inspiration from modern franchise entries and niche mechanics across the *Dragon Quest* series.
 
-**Developed and Maintained by:** [Jeahnoh](https://github.com/cdunlap-gravic)
+**Developed and Maintained by:** [Jeahnoh](https://github.com/Jeahnoh)
 
 ## 🗺️ Project Roadmap: Mechanics vs. Aesthetics
 
