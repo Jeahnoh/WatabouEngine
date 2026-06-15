@@ -42,9 +42,9 @@
 | `19` | `0x64000` | `0x67FFF` | 16KB  | Unknown | | Unmapped | [Bank 19](./DWM_ROM_Maps/025_Bank_19.md) |
 | `1A` | `0x68000` | `0x6BFFF` | 16KB  | Unknown | | Unmapped | [Bank 1A](./DWM_ROM_Maps/026_Bank_1A.md) |
 | `1B` | `0x6C000` | `0x6FFFF` | 16KB  | Unknown | | Unmapped | [Bank 1B](./DWM_ROM_Maps/027_Bank_1B.md) |
-| `1C` | `0x70000` | `0x73FFF` | 16KB  | Unknown | | Unmapped | [Bank 1C](./DWM_ROM_Maps/028_Bank_1C.md) |
-| `1D` | `0x74000` | `0x77FFF` | 16KB  | Unknown | | Unmapped | [Bank 1D](./DWM_ROM_Maps/029_Bank_1D.md) |
-| `1E` | `0x78000` | `0x7BFFF` | 16KB  | Unknown | | Unmapped | [Bank 1E](./DWM_ROM_Maps/030_Bank_1E.md) |
+| `1C` | `0x70000` | `0x73FFF` | 16KB  | Audio | | ON HOLD | [Bank 1C](./DWM_ROM_Maps/028_Bank_1C.md) |
+| `1D` | `0x74000` | `0x77FFF` | 16KB  | Audio | | ON HOLD | [Bank 1D](./DWM_ROM_Maps/029_Bank_1D.md) |
+| `1E` | `0x78000` | `0x7BFFF` | 16KB  | Audio | | ON HOLD | [Bank 1E](./DWM_ROM_Maps/030_Bank_1E.md) |
 | `1F` | `0x7C000` | `0x7FFFF` | 16KB  | Unknown | | Unmapped | [Bank 1F](./DWM_ROM_Maps/031_Bank_1F.md) |
 | `20` | `0x80000` | `0x83FFF` | 16KB  | Unknown | | Unmapped | [Bank 20](./DWM_ROM_Maps/032_Bank_20.md) |
 | `21` | `0x84000` | `0x87FFF` | 16KB  | Unknown | | Unmapped | [Bank 21](./DWM_ROM_Maps/033_Bank_21.md) |
@@ -111,43 +111,50 @@
 | `5E` | `0x178000` | `0x17BFFF` | 16KB  | Unknown | | Unmapped | [Bank 5E](./DWM_ROM_Maps/094_Bank_5E.md) |
 | `5F` | `0x17C000` | `0x17FFFF` | 16KB  | Unknown | | Unmapped | [Bank 5F](./DWM_ROM_Maps/095_Bank_5F.md) |
 
+### Banks `0x60` - `0x7F`: Empty/Garbage Banks
+
+These Banks contain no useful data that is utilized in *Dragon Warrior Monsters* in any known capacity. Prime real estate for custom content to be added. There are other empty/garbage sectors in prior banks, however these banks are safe to fully zero out.<sup>[1](#note1)</sup>
+
+> **Theory: The Wario Land II Garbage Data**
+> The data that exists in some of these banks are not present in retail copies of *Wario Land II*. It is likely that the TOSE team had a couple test cartridges lying around the office that were still not zeroed out from *Wario Land II*'s development days and at some point during development, or close to the release, of *Dragon Warrior Monsters*, a developer flashed the ROM to the cartridge and this version made its way to production. 
+
 ---
-### Empty/Garbage Banks
-These Banks contain no useful data that is utilized in Dragon Warrior Monsters in any known capacity. Prime real estate for custom content to be added. There are other empty/garbage sectors in prior banks, however these banks should be safe to fully zero out.
+<span style="font-size: 11px;"><a id="note1"></a>**[1]** Tested by Annon Contributor.</span>
+
 | Bank | Start    | End      | Size  | Category      | Description / Contents                  | Status       | Notes Link |
 | :--- | :------- | :------- | :---- | :------------ | :-------------------------------------- | :----------- | :--------- |
-| `60` | `0x180000` | `0x183FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 60](./DWM_ROM_Maps/096_Bank_60.md)    |
-| `61` | `0x184000` | `0x187FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 61](./DWM_ROM_Maps/097_Bank_61.md)    |
-| `62` | `0x188000` | `0x18BFFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 62](./DWM_ROM_Maps/098_Bank_62.md)    |
-| `63` | `0x18C000` | `0x18FFFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 63](./DWM_ROM_Maps/099_Bank_63.md)    |
-| `64` | `0x190000` | `0x193FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 64](./DWM_ROM_Maps/100_Bank_64.md)    |
-| `65` | `0x194000` | `0x197FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 65](./DWM_ROM_Maps/101_Bank_65.md)    |
-| `66` | `0x198000` | `0x19BFFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 66](./DWM_ROM_Maps/102_Bank_66.md)    |
-| `67` | `0x19C000` | `0x19FFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 67](./DWM_ROM_Maps/103_Bank_67.md)    |
-| `68` | `0x1A0000` | `0x1A3FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 68](./DWM_ROM_Maps/104_Bank_68.md)    |
-| `69` | `0x1A4000` | `0x1A7FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 69](./DWM_ROM_Maps/105_Bank_69.md)    |
-| `6A` | `0x1A8000` | `0x1ABFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6A](./DWM_ROM_Maps/106_Bank_6A.md)    |
-| `6B` | `0x1AC000` | `0x1AFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6B](./DWM_ROM_Maps/107_Bank_6B.md)    |
-| `6C` | `0x1B0000` | `0x1B3FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6C](./DWM_ROM_Maps/108_Bank_6C.md)    |
-| `6D` | `0x1B4000` | `0x1B7FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6D](./DWM_ROM_Maps/109_Bank_6D.md)    |
-| `6E` | `0x1B8000` | `0x1BBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6E](./DWM_ROM_Maps/110_Bank_6E.md)    |
-| `6F` | `0x1BC000` | `0x1BFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 6F](./DWM_ROM_Maps/111_Bank_6F.md)    |
-| `70` | `0x1C0000` | `0x1C3FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 70](./DWM_ROM_Maps/112_Bank_70.md)    |
-| `71` | `0x1C4000` | `0x1C7FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 71](./DWM_ROM_Maps/113_Bank_71.md)    |
-| `72` | `0x1C8000` | `0x1CBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 72](./DWM_ROM_Maps/114_Bank_72.md)    |
-| `73` | `0x1CC000` | `0x1CFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 73](./DWM_ROM_Maps/115_Bank_73.md)    |
-| `74` | `0x1D0000` | `0x1D3FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 74](./DWM_ROM_Maps/116_Bank_74.md)    |
-| `75` | `0x1D4000` | `0x1D7FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 75](./DWM_ROM_Maps/117_Bank_75.md)    |
-| `76` | `0x1D8000` | `0x1DBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 76](./DWM_ROM_Maps/118_Bank_76.md)    |
-| `77` | `0x1DC000` | `0x1DFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 77](./DWM_ROM_Maps/119_Bank_77.md)    |
-| `78` | `0x1E0000` | `0x1E3FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 78](./DWM_ROM_Maps/120_Bank_78.md)    |
-| `79` | `0x1E4000` | `0x1E7FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 79](./DWM_ROM_Maps/121_Bank_79.md)    |
-| `7A` | `0x1E8000` | `0x1EBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7A](./DWM_ROM_Maps/122_Bank_7A.md)    |
-| `7B` | `0x1EC000` | `0x1EFFFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 7B](./DWM_ROM_Maps/123_Bank_7B.md)    |
-| `7C` | `0x1F0000` | `0x1F3FFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7C](./DWM_ROM_Maps/124_Bank_7C.md)    |
-| `7D` | `0x1F4000` | `0x1F7FFF` | 16KB  | Empty | Functionally Empty Bank. Garbage Wario Land II Data. | Mapped | [Bank 7D](./DWM_ROM_Maps/125_Bank_7D.md)    |
-| `7E` | `0x1F8000` | `0x1FBFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7E](./DWM_ROM_Maps/126_Bank_7E.md)    |
-| `7F` | `0x1FC000` | `0x1FFFFF` | 16KB  | Empty | Empty Bank | Mapped | [Bank 7F](./DWM_ROM_Maps/127_Bank_7F.md)    | 
+| `60` | `0x180000` | `0x183FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 60](./DWM_ROM_Maps/096_Bank_60.md)    |
+| `61` | `0x184000` | `0x187FFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 61](./DWM_ROM_Maps/097_Bank_61.md)    |
+| `62` | `0x188000` | `0x18BFFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 62](./DWM_ROM_Maps/098_Bank_62.md)    |
+| `63` | `0x18C000` | `0x18FFFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 63](./DWM_ROM_Maps/099_Bank_63.md)    |
+| `64` | `0x190000` | `0x193FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 64](./DWM_ROM_Maps/100_Bank_64.md)    |
+| `65` | `0x194000` | `0x197FFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 65](./DWM_ROM_Maps/101_Bank_65.md)    |
+| `66` | `0x198000` | `0x19BFFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 66](./DWM_ROM_Maps/102_Bank_66.md)    |
+| `67` | `0x19C000` | `0x19FFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 67](./DWM_ROM_Maps/103_Bank_67.md)    |
+| `68` | `0x1A0000` | `0x1A3FFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 68](./DWM_ROM_Maps/104_Bank_68.md)    |
+| `69` | `0x1A4000` | `0x1A7FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 69](./DWM_ROM_Maps/105_Bank_69.md)    |
+| `6A` | `0x1A8000` | `0x1ABFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6A](./DWM_ROM_Maps/106_Bank_6A.md)    |
+| `6B` | `0x1AC000` | `0x1AFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6B](./DWM_ROM_Maps/107_Bank_6B.md)    |
+| `6C` | `0x1B0000` | `0x1B3FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6C](./DWM_ROM_Maps/108_Bank_6C.md)    |
+| `6D` | `0x1B4000` | `0x1B7FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6D](./DWM_ROM_Maps/109_Bank_6D.md)    |
+| `6E` | `0x1B8000` | `0x1BBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6E](./DWM_ROM_Maps/110_Bank_6E.md)    |
+| `6F` | `0x1BC000` | `0x1BFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 6F](./DWM_ROM_Maps/111_Bank_6F.md)    |
+| `70` | `0x1C0000` | `0x1C3FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 70](./DWM_ROM_Maps/112_Bank_70.md)    |
+| `71` | `0x1C4000` | `0x1C7FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 71](./DWM_ROM_Maps/113_Bank_71.md)    |
+| `72` | `0x1C8000` | `0x1CBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 72](./DWM_ROM_Maps/114_Bank_72.md)    |
+| `73` | `0x1CC000` | `0x1CFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 73](./DWM_ROM_Maps/115_Bank_73.md)    |
+| `74` | `0x1D0000` | `0x1D3FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 74](./DWM_ROM_Maps/116_Bank_74.md)    |
+| `75` | `0x1D4000` | `0x1D7FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 75](./DWM_ROM_Maps/117_Bank_75.md)    |
+| `76` | `0x1D8000` | `0x1DBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 76](./DWM_ROM_Maps/118_Bank_76.md)    |
+| `77` | `0x1DC000` | `0x1DFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 77](./DWM_ROM_Maps/119_Bank_77.md)    |
+| `78` | `0x1E0000` | `0x1E3FFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 78](./DWM_ROM_Maps/120_Bank_78.md)    |
+| `79` | `0x1E4000` | `0x1E7FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 79](./DWM_ROM_Maps/121_Bank_79.md)    |
+| `7A` | `0x1E8000` | `0x1EBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7A](./DWM_ROM_Maps/122_Bank_7A.md)    |
+| `7B` | `0x1EC000` | `0x1EFFFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 7B](./DWM_ROM_Maps/123_Bank_7B.md)    |
+| `7C` | `0x1F0000` | `0x1F3FFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7C](./DWM_ROM_Maps/124_Bank_7C.md)    |
+| `7D` | `0x1F4000` | `0x1F7FFF` | 16KB  | Unused / Garbage Data | Garbage Data (*Wario Land II*) | Mapped | [Bank 7D](./DWM_ROM_Maps/125_Bank_7D.md)    |
+| `7E` | `0x1F8000` | `0x1FBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7E](./DWM_ROM_Maps/126_Bank_7E.md)    |
+| `7F` | `0x1FC000` | `0x1FFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7F](./DWM_ROM_Maps/127_Bank_7F.md)    | 
 ---
 © 2026 Jeahnoh. Licensed under CC BY-NC 4.0. Attribution Required.
 See LICENSE.md in the repository root for full non-commercial terms.

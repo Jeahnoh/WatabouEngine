@@ -16,7 +16,7 @@
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
 | `0x4000` | `0x1F4000` | `0x26AD` | Wario Land II sprite data. Non-standard `2bpp` format. |
-| `0x66AD` | `0x1f66AD` | `0x1953` | 0x00's |
+| `0x66AD` | `0x1F66AD` | `0x1953` | 0x00's |
 
 ---
 
