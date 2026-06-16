@@ -1,7 +1,23 @@
-# LICENSE SUMMARY
+# License: Watabou Engine
+
+> **TL;DR (Plain English Summary):**  
+> 
+>Generally, I just want ya'll to enjoy this project, and not make and sell the information/code provided here. If you're a CC or a modder, please, do what you normally do to keep the lights on, just don't lock anything behind a paywall. This project is open source for a good reason: I love this game series and I want us all to be able to enjoy it in new ways!      
+> * **You CAN:** Use this engine to build and release your own mods, share it with friends, and accept voluntary donations (Patreon, Nexus Mods DP, Ko-Fi, etc.) for your specific mod.
+> * **You CAN (Content Creators):** Stream gameplay, make YouTube videos or reviews, and fully monetize that media (Twitch subs, YouTube ads, sponsorships, etc.). 
+> * **You CANNOT:** Sell this engine/code, lock your mod behind a paywall, use this engine for commercial games, or monetize the documentation/ROM maps. 
+> * **You MUST:** Give credit to the original project and creator (Jeahnoh), keep your mods open and free, and legally provide your own game assets (no ROMs are included).
+> 
+> *Disclaimer: This summary is for human convenience only. The legally binding terms are fully detailed in the actual license text below.*
+---
+
+# Full Legal License Text
+
+
+## LICENSE SUMMARY
 
 **Project Ethos: By a Fan, For Fans**
-This project is a clean-room reimplementation born out of passion for the original game series. It is designed to be completely free, open for the community to learn from, and protected from commercial exploitation. No one is permitted to profit from the distribution of any code, documentation, or reverse-engineered knowledge provided in this repository.
+This project is a clean-room reimplementation born out of passion for the original game series. It is designed to be completely free, open for the community to learn from, and protected from commercial exploitation. No one is permitted to profit from the distribution of any code, custom assets, documentation, or reverse-engineered knowledge provided in this repository.
 
 ## 1. Engine & Source Code
 
@@ -11,7 +27,7 @@ This source code is a custom recreation and must remain strictly non-commercial.
 
 * **You may:** Read, modify, compile, and run this code for personal use.
 * **You may:** Create and share modified versions (mods) or forks for free.
-* **You may accept voluntary donations:** Modders are welcome to link their Patreon, Ko-fi, or similar tip jars to support their work, provided the mods utilizing this engine are publicly and freely available to everyone.
+* **You may accept voluntary donations:** Modders are welcome to link their Patreon, Ko-Fi, Buy Me a Coffee, or similar tip jars to support their work, provided the mods utilizing this engine are publicly and freely available to everyone.
 * **You may NOT:** Sell this code, exact copies, or modified versions of this engine or any of its parts.
 * **You may NOT:** Use this code, or the architecture it provides, in any commercial product, lock it behind a mandatory paywall (including Patreon-exclusive releases), or utilize it in a monetized game project.
 
