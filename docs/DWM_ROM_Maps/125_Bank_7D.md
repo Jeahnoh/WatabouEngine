@@ -1,12 +1,12 @@
 [⬅️ Back to Master ROM Map](../DWM_Master_ROM_Map.md)
         
-# Bank 7D: Empty / Garbage Data
+# Bank `0x7D`: Garbage Data (Wario Land II)
 ## Overview
 **Local Hex Range:** `0x4000` - `0x7FFF`  
 **Global Hex Range:** `0x1F4000` - `0x1F7FFF`  
 **Bank Type:** N/A  
-**Category:** Empty / Garbage  
-**Summary:** Leftover data from Wario Land II. Entire bank matches Bank `0x7D` from WL2.
+**Category:** Unused / Garbage Data  
+**Summary:** Leftover data from *Wario Land II*. Entire bank matches Bank `0x7D` from WL2.
 
 ---
 
