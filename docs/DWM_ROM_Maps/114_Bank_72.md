@@ -11,7 +11,7 @@
 ---
 
 ## Memory Map (Granular)
-*Break down of the specific blocks within this bank.*
+*Breakdown of the specific blocks within this bank.*
 
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
