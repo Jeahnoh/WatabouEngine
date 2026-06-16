@@ -1,21 +1,21 @@
 [⬅️ Back to Master ROM Map](../DWM_Master_ROM_Map.md)
         
-# Bank 7E: Empty
+# Bank `0x7E`: Empty
 ## Overview
 **Local Hex Range:** `0x4000` - `0x7FFF`  
 **Global Hex Range:** `0x1F8000` - `0x1FBFFF`  
 **Bank Type:** N/A  
-**Category:** Empty  
-**Summary:** Empty bank.
+**Category:** Free  
+**Summary:** This bank contains no game data. It consists entirely of padding (`0x00`) and is safe to use for custom code injection or expanded assets.  
 
 ---
 
 ## Memory Map (Granular)
-*Break down the specific blocks within this bank.*
+*Break down of the specific blocks within this bank.*
 
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
-| `0x4000`         | `0x1F8000`        | 16KB    | 0x00's |
+| `0x4000` | `0x1F8000` | 16KB | `0x00` padding (Safe Free Space) |
 
 ---
 

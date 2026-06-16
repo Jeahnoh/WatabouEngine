@@ -11,12 +11,12 @@
 ---
 
 ## Memory Map (Granular)
-*Break down the specific blocks within this bank.*
+*Break down of the specific blocks within this bank.*
 
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
 | `0x4000` | `0x1EC000` | `0x1212` | Wario Land II sprite data. Non-standard `2bpp` format. |
-| `0x5212` | `0x1ED212` | `0x2DEE` | 0x00's |
+| `0x5212` | `0x1ED212` | `0x2DEE` | `0x00` padding (Safe Free Space) |
 
 ---
 
