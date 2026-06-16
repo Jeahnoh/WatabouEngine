@@ -1,6 +1,6 @@
 [⬅️ Back to Master ROM Map](../DWM_Master_ROM_Map.md)
         
-# Bank 1D: Music Bank
+# Bank `0x1D`: Music Bank
 ## Overview
 **Local Hex Range:** `0x4000` - `0x7FFF`  
 **Global Hex Range:** `0x074000` - `0x077FFF`  
@@ -15,7 +15,7 @@
 
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
-| `0x4000`         | `0x74000`        | `0x1`    | Bank Header Byte |
+| `0x4000`         | `0x74000`        | `0x1`    | Bank ID Header Byte |
 | `0x4001`         | `0x74001`        | `0x36C3`    | Music Data | need to break up what songs, currently unknown
 | `0x76C4` | `0x776C4` | `0x93C` | `0x00`'s to end|
 

@@ -80,7 +80,7 @@
 | `3F` | `0xFC000` | `0xFFFFF` | 16KB  | Unknown | | Unmapped | [Bank 3F](./DWM_ROM_Maps/063_Bank_3F.md) |
 | `40` | `0x100000` | `0x103FFF` | 16KB  | Unknown | | Unmapped | [Bank 40](./DWM_ROM_Maps/064_Bank_40.md) |
 | `41` | `0x104000` | `0x107FFF` | 16KB  | Unknown | | Unmapped | [Bank 41](./DWM_ROM_Maps/065_Bank_41.md) |
-| `42` | `0x108000` | `0x10BFFF` | 16KB  | Unknown | | Unmapped | [Bank 42](./DWM_ROM_Maps/066_Bank_42.md) |
+| `42` | `0x108000` | `0x10BFFF` | 16KB  | Text | Dialogue Bank | Mapping | [Bank 42](./DWM_ROM_Maps/066_Bank_42.md) |
 | `43` | `0x10C000` | `0x10FFFF` | 16KB  | Unknown | | Unmapped | [Bank 43](./DWM_ROM_Maps/067_Bank_43.md) |
 | `44` | `0x110000` | `0x113FFF` | 16KB  | Unknown | | Unmapped | [Bank 44](./DWM_ROM_Maps/068_Bank_44.md) |
 | `45` | `0x114000` | `0x117FFF` | 16KB  | Unknown | | Unmapped | [Bank 45](./DWM_ROM_Maps/069_Bank_45.md) |
