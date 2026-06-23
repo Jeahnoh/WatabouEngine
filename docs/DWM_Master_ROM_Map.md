@@ -15,15 +15,15 @@
 | Bank | Start    | End      | Size  | Category      | Description / Contents                  | Status       | Notes Link |
 | :--- | :------- | :------- | :---- | :------------ | :-------------------------------------- | :----------- | :--------- |
 | `00` | `0x100` | `0x3FFF` | 15.75KB | Core Engine | | Unmapped | [Bank 00](./DWM_ROM_Maps/000_Bank_00.md) |
-| `01` | `0x4000` | `0x7FFF` | 16KB  | Unknown | | Unmapped | [Bank 01](./DWM_ROM_Maps/001_Bank_01.md) |
+| `01` | `0x4000` | `0x7FFF` | 16KB  | Game Data | Gate Encounter Data | Unmapped | [Bank 01](./DWM_ROM_Maps/001_Bank_01.md) |
 | `02` | `0x8000` | `0xBFFF` | 16KB  | Unknown | | Unmapped | [Bank 02](./DWM_ROM_Maps/002_Bank_02.md) |
-| `03` | `0xC000` | `0xFFFF` | 16KB  | Unknown | | Unmapped | [Bank 03](./DWM_ROM_Maps/003_Bank_03.md) |
-| `04` | `0x10000` | `0x13FFF` | 16KB  | Unknown | | Unmapped | [Bank 04](./DWM_ROM_Maps/004_Bank_04.md) |
+| `03` | `0xC000` | `0xFFFF` | 16KB  | Game Data | Monster / Item Data | Unmapped | [Bank 03](./DWM_ROM_Maps/003_Bank_03.md) |
+| `04` | `0x10000` | `0x13FFF` | 16KB  | Unknown | *Audio?* | Unmapped | [Bank 04](./DWM_ROM_Maps/004_Bank_04.md) |
 | `05` | `0x14000` | `0x17FFF` | 16KB  | Unknown | | Unmapped | [Bank 05](./DWM_ROM_Maps/005_Bank_05.md) |
-| `06` | `0x18000` | `0x1BFFF` | 16KB  | Unknown | Skill data | Unmapped | [Bank 06](./DWM_ROM_Maps/006_Bank_06.md) |
+| `06` | `0x18000` | `0x1BFFF` | 16KB  | Game Data | Skill Data | Unmapped | [Bank 06](./DWM_ROM_Maps/006_Bank_06.md) |
 | `07` | `0x1C000` | `0x1FFFF` | 16KB  | Unknown | | Unmapped | [Bank 07](./DWM_ROM_Maps/007_Bank_07.md) |
-| `08` | `0x20000` | `0x23FFF` | 16KB  | Unknown | Super Gameboy Borders | Unmapped | [Bank 08](./DWM_ROM_Maps/008_Bank_08.md) |
-| `09` | `0x24000` | `0x27FFF` | 16KB  | Unknown | | Unmapped | [Bank 09](./DWM_ROM_Maps/009_Bank_09.md) |
+| `08` | `0x20000` | `0x23FFF` | 16KB  | UI | Super Gameboy Borders | Unmapped | [Bank 08](./DWM_ROM_Maps/008_Bank_08.md) |
+| `09` | `0x24000` | `0x27FFF` | 16KB  | Unknown | *Naming Screen?* | Unmapped | [Bank 09](./DWM_ROM_Maps/009_Bank_09.md) |
 | `0A` | `0x28000` | `0x2BFFF` | 16KB  | Unknown | | Unmapped | [Bank 0A](./DWM_ROM_Maps/010_Bank_0A.md) |
 | `0B` | `0x2C000` | `0x2FFFF` | 16KB  | Unknown | | Unmapped | [Bank 0B](./DWM_ROM_Maps/011_Bank_0B.md) |
 | `0C` | `0x30000` | `0x33FFF` | 16KB  | Unknown | | Unmapped | [Bank 0C](./DWM_ROM_Maps/012_Bank_0C.md) |
@@ -33,14 +33,14 @@
 | `10` | `0x40000` | `0x43FFF` | 16KB  | Unknown | | Unmapped | [Bank 10](./DWM_ROM_Maps/016_Bank_10.md) |
 | `11` | `0x44000` | `0x47FFF` | 16KB  | Unknown | | Unmapped | [Bank 11](./DWM_ROM_Maps/017_Bank_11.md) |
 | `12` | `0x48000` | `0x4BFFF` | 16KB  | Unknown | | Unmapped | [Bank 12](./DWM_ROM_Maps/018_Bank_12.md) |
-| `13` | `0x4C000` | `0x4FFFF` | 16KB  | Unknown | | Unmapped | [Bank 13](./DWM_ROM_Maps/019_Bank_13.md) |
-| `14` | `0x50000` | `0x53FFF` | 16KB  | Unknown | | Unmapped | [Bank 14](./DWM_ROM_Maps/020_Bank_14.md) |
-| `15` | `0x54000` | `0x57FFF` | 16KB  | Unknown | | Unmapped | [Bank 15](./DWM_ROM_Maps/021_Bank_15.md) |
-| `16` | `0x58000` | `0x5BFFF` | 16KB  | Unknown | | Unmapped | [Bank 16](./DWM_ROM_Maps/022_Bank_16.md) |
+| `13` | `0x4C000` | `0x4FFFF` | 16KB  | Game Data | EXP Table, Stat Gains | Unmapped | [Bank 13](./DWM_ROM_Maps/019_Bank_13.md) |
+| `14` | `0x50000` | `0x53FFF` | 16KB  | Game Data | Static Name Pointers / Static Names | Unmapped | [Bank 14](./DWM_ROM_Maps/020_Bank_14.md) |
+| `15` | `0x54000` | `0x57FFF` | 16KB  | UI | Main Menu Text | Unmapped | [Bank 15](./DWM_ROM_Maps/021_Bank_15.md) |
+| `16` | `0x58000` | `0x5BFFF` | 16KB  | Game Data | Skill Evolution / Breeding Tables | Unmapped | [Bank 16](./DWM_ROM_Maps/022_Bank_16.md) |
 | `17` | `0x5C000` | `0x5FFFF` | 16KB  | Unknown | | Unmapped | [Bank 17](./DWM_ROM_Maps/023_Bank_17.md) |
-| `18` | `0x60000` | `0x63FFF` | 16KB  | Unknown | | Unmapped | [Bank 18](./DWM_ROM_Maps/024_Bank_18.md) |
-| `19` | `0x64000` | `0x67FFF` | 16KB  | Unknown | | Unmapped | [Bank 19](./DWM_ROM_Maps/025_Bank_19.md) |
-| `1A` | `0x68000` | `0x6BFFF` | 16KB  | Unknown | | Unmapped | [Bank 1A](./DWM_ROM_Maps/026_Bank_1A.md) |
+| `18` | `0x60000` | `0x63FFF` | 16KB  | Text | Unlabled Table* needs work | Unmapped | [Bank 18](./DWM_ROM_Maps/024_Bank_18.md) |
+| `19` | `0x64000` | `0x67FFF` | 16KB  | Game Data | Map Data | Unmapped | [Bank 19](./DWM_ROM_Maps/025_Bank_19.md) |
+| `1A` | `0x68000` | `0x6BFFF` | 16KB  | Text | Unlabled Table* needs work | Unmapped | [Bank 1A](./DWM_ROM_Maps/026_Bank_1A.md) |
 | `1B` | `0x6C000` | `0x6FFFF` | 16KB  | Text | Tables `0x00` - `0x02` | Mapped, Needs Name Checks | [Bank 1B](./DWM_ROM_Maps/027_Bank_1B.md) |
 | `1C` | `0x70000` | `0x73FFF` | 16KB  | Audio | | ON HOLD | [Bank 1C](./DWM_ROM_Maps/028_Bank_1C.md) |
 | `1D` | `0x74000` | `0x77FFF` | 16KB  | Audio | | ON HOLD | [Bank 1D](./DWM_ROM_Maps/029_Bank_1D.md) |
@@ -52,27 +52,27 @@
 | `23` | `0x8C000` | `0x8FFFF` | 16KB  | Tiles | Graphic Bank | Unmapped | [Bank 23](./DWM_ROM_Maps/035_Bank_23.md) |
 | `24` | `0x90000` | `0x93FFF` | 16KB  | Tiles | Graphic Bank | Unmapped | [Bank 24](./DWM_ROM_Maps/036_Bank_24.md) |
 | `25` | `0x94000` | `0x97FFF` | 16KB  | Tiles | Graphic Bank | Unmapped | [Bank 25](./DWM_ROM_Maps/037_Bank_25.md) |
-| `26` | `0x98000` | `0x9BFFF` | 16KB  | Unknown | | Unmapped | [Bank 26](./DWM_ROM_Maps/038_Bank_26.md) |
+| `26` | `0x98000` | `0x9BFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 26](./DWM_ROM_Maps/038_Bank_26.md) |
 | `27` | `0x9C000` | `0x9FFFF` | 16KB  | Unknown | | Unmapped | [Bank 27](./DWM_ROM_Maps/039_Bank_27.md) |
-| `28` | `0xA0000` | `0xA3FFF` | 16KB  | Unknown | | Unmapped | [Bank 28](./DWM_ROM_Maps/040_Bank_28.md) |
-| `29` | `0xA4000` | `0xA7FFF` | 16KB  | Unknown | | Unmapped | [Bank 29](./DWM_ROM_Maps/041_Bank_29.md) |
-| `2A` | `0xA8000` | `0xABFFF` | 16KB  | Unknown | | Unmapped | [Bank 2A](./DWM_ROM_Maps/042_Bank_2A.md) |
+| `28` | `0xA0000` | `0xA3FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 28](./DWM_ROM_Maps/040_Bank_28.md) |
+| `29` | `0xA4000` | `0xA7FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 29](./DWM_ROM_Maps/041_Bank_29.md) |
+| `2A` | `0xA8000` | `0xABFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 2A](./DWM_ROM_Maps/042_Bank_2A.md) |
 | `2B` | `0xAC000` | `0xAFFFF` | 16KB  | Unknown | | Unmapped | [Bank 2B](./DWM_ROM_Maps/043_Bank_2B.md) |
-| `2C` | `0xB0000` | `0xB3FFF` | 16KB  | Unknown | | Unmapped | [Bank 2C](./DWM_ROM_Maps/044_Bank_2C.md) |
-| `2D` | `0xB4000` | `0xB7FFF` | 16KB  | Unknown | | Unmapped | [Bank 2D](./DWM_ROM_Maps/045_Bank_2D.md) |
-| `2E` | `0xB8000` | `0xBBFFF` | 16KB  | Unknown | | Unmapped | [Bank 2E](./DWM_ROM_Maps/046_Bank_2E.md) |
+| `2C` | `0xB0000` | `0xB3FFF` | 16KB  | UI | Super Gameboy Borders | Unmapped | [Bank 2C](./DWM_ROM_Maps/044_Bank_2C.md) |
+| `2D` | `0xB4000` | `0xB7FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 2D](./DWM_ROM_Maps/045_Bank_2D.md) |
+| `2E` | `0xB8000` | `0xBBFFF` | 16KB  | Art / UI | Graphic Bank / SGB Border | Unmapped | [Bank 2E](./DWM_ROM_Maps/046_Bank_2E.md) |
 | `2F` | `0xBC000` | `0xBFFFF` | 16KB  | Sprites | Sprite Bank | Active Mapping | [Bank 2F](./DWM_ROM_Maps/047_Bank_2F.md) | MY FAVORITE BANK
-| `30` | `0xC0000` | `0xC3FFF` | 16KB  | Unknown | | Unmapped | [Bank 30](./DWM_ROM_Maps/048_Bank_30.md) |
-| `31` | `0xC4000` | `0xC7FFF` | 16KB  | Unknown | | Unmapped | [Bank 31](./DWM_ROM_Maps/049_Bank_31.md) |
-| `32` | `0xC8000` | `0xCBFFF` | 16KB  | Unknown | | Unmapped | [Bank 32](./DWM_ROM_Maps/050_Bank_32.md) |
-| `33` | `0xCC000` | `0xCFFFF` | 16KB  | Unknown | | Unmapped | [Bank 33](./DWM_ROM_Maps/051_Bank_33.md) |
-| `34` | `0xD0000` | `0xD3FFF` | 16KB  | Unknown | | Unmapped | [Bank 34](./DWM_ROM_Maps/052_Bank_34.md) |
-| `35` | `0xD4000` | `0xD7FFF` | 16KB  | Unknown | | Unmapped | [Bank 35](./DWM_ROM_Maps/053_Bank_35.md) |
-| `36` | `0xD8000` | `0xDBFFF` | 16KB  | Unknown | | Unmapped | [Bank 36](./DWM_ROM_Maps/054_Bank_36.md) |
-| `37` | `0xDC000` | `0xDFFFF` | 16KB  | Unknown | | Unmapped | [Bank 37](./DWM_ROM_Maps/055_Bank_37.md) |
-| `38` | `0xE0000` | `0xE3FFF` | 16KB  | Unknown | | Unmapped | [Bank 38](./DWM_ROM_Maps/056_Bank_38.md) |
-| `39` | `0xE4000` | `0xE7FFF` | 16KB  | Unknown | | Unmapped | [Bank 39](./DWM_ROM_Maps/057_Bank_39.md) |
-| `3A` | `0xE8000` | `0xEBFFF` | 16KB  | Unknown | | Unmapped | [Bank 3A](./DWM_ROM_Maps/058_Bank_3A.md) |
+| `30` | `0xC0000` | `0xC3FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 30](./DWM_ROM_Maps/048_Bank_30.md) |
+| `31` | `0xC4000` | `0xC7FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 31](./DWM_ROM_Maps/049_Bank_31.md) |
+| `32` | `0xC8000` | `0xCBFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 32](./DWM_ROM_Maps/050_Bank_32.md) |
+| `33` | `0xCC000` | `0xCFFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 33](./DWM_ROM_Maps/051_Bank_33.md) |
+| `34` | `0xD0000` | `0xD3FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 34](./DWM_ROM_Maps/052_Bank_34.md) |
+| `35` | `0xD4000` | `0xD7FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 35](./DWM_ROM_Maps/053_Bank_35.md) |
+| `36` | `0xD8000` | `0xDBFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 36](./DWM_ROM_Maps/054_Bank_36.md) |
+| `37` | `0xDC000` | `0xDFFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 37](./DWM_ROM_Maps/055_Bank_37.md) |
+| `38` | `0xE0000` | `0xE3FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 38](./DWM_ROM_Maps/056_Bank_38.md) |
+| `39` | `0xE4000` | `0xE7FFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 39](./DWM_ROM_Maps/057_Bank_39.md) |
+| `3A` | `0xE8000` | `0xEBFFF` | 16KB  | Unknown | Graphic Bank | Unmapped | [Bank 3A](./DWM_ROM_Maps/058_Bank_3A.md) |
 | `3B` | `0xEC000` | `0xEFFFF` | 16KB  | Unknown | | Unmapped | [Bank 3B](./DWM_ROM_Maps/059_Bank_3B.md) |
 | `3C` | `0xF0000` | `0xF3FFF` | 16KB  | Unknown | | Unmapped | [Bank 3C](./DWM_ROM_Maps/060_Bank_3C.md) |
 | `3D` | `0xF4000` | `0xF7FFF` | 16KB  | Unknown | | Unmapped | [Bank 3D](./DWM_ROM_Maps/061_Bank_3D.md) |
@@ -94,22 +94,26 @@
 | `4D` | `0x134000` | `0x137FFF` | 16KB  | Text | Tables `0x2C` - `0x2D`| Pointer Tables Marked | [Bank 4D](./DWM_ROM_Maps/077_Bank_4D.md) |
 | `4E` | `0x138000` | `0x13BFFF` | 16KB  | Text | Table `0x2E` | Pointer Tables Marked | [Bank 4E](./DWM_ROM_Maps/078_Bank_4E.md) |
 | `4F` | `0x13C000` | `0x13FFFF` | 16KB  | Text | Tables `0x2F` - `0x30` | Pointer Tables Marked | [Bank 4F](./DWM_ROM_Maps/079_Bank_4F.md) |
-| `50` | `0x140000` | `0x143FFF` | 16KB  | Unknown | | Unmapped | [Bank 50](./DWM_ROM_Maps/080_Bank_50.md) |
+| `50` | `0x140000` | `0x143FFF` | 16KB  | Game Systems | Personality Adjustment Code | Unmapped | [Bank 50](./DWM_ROM_Maps/080_Bank_50.md) |
 | `51` | `0x144000` | `0x147FFF` | 16KB  | Unknown | | Unmapped | [Bank 51](./DWM_ROM_Maps/081_Bank_51.md) |
-| `52` | `0x148000` | `0x14BFFF` | 16KB  | Unknown | | Unmapped | [Bank 52](./DWM_ROM_Maps/082_Bank_52.md) |
+| `52` | `0x148000` | `0x14BFFF` | 16KB  | Game Systems | Skill Functions | Unmapped | [Bank 52](./DWM_ROM_Maps/082_Bank_52.md) |
 | `53` | `0x14C000` | `0x14FFFF` | 16KB  | Unknown | | Unmapped | [Bank 53](./DWM_ROM_Maps/083_Bank_53.md) |
 | `54` | `0x150000` | `0x153FFF` | 16KB  | Unknown | | Unmapped | [Bank 54](./DWM_ROM_Maps/084_Bank_54.md) |
-| `55` | `0x154000` | `0x157FFF` | 16KB  | Unknown | Definitely a small text table, but it's likely for UI. Won't count towards rest of the tables for now. | Pointer Tables Started | [Bank 55](./DWM_ROM_Maps/085_Bank_55.md) |
+| `55` | `0x154000` | `0x157FFF` | 16KB  | Unknown | Likely UI Text tbl[^1] | Pointer Tables Started | [Bank 55](./DWM_ROM_Maps/085_Bank_55.md) |
 | `56` | `0x158000` | `0x15BFFF` | 16KB  | Text | Tables `0x31` - `0x32` | Unmapped | [Bank 56](./DWM_ROM_Maps/086_Bank_56.md) |
-| `57` | `0x15C000` | `0x15FFFF` | 16KB  | Unknown | | Unmapped | [Bank 57](./DWM_ROM_Maps/087_Bank_57.md) |
+| `57` | `0x15C000` | `0x15FFFF` | 16KB  | Game Systems | Perosnality Adjustment Table | Unmapped | [Bank 57](./DWM_ROM_Maps/087_Bank_57.md) |
 | `58` | `0x160000` | `0x163FFF` | 16KB  | Unknown | | Unmapped | [Bank 58](./DWM_ROM_Maps/088_Bank_58.md) |
 | `59` | `0x164000` | `0x167FFF` | 16KB  | Text | Table `0x33` | Unmapped | [Bank 59](./DWM_ROM_Maps/089_Bank_59.md) |
-| `5A` | `0x168000` | `0x16BFFF` | 16KB  | Unknown | | Unmapped | [Bank 5A](./DWM_ROM_Maps/090_Bank_5A.md) |
-| `5B` | `0x16C000` | `0x16FFFF` | 16KB  | Unknown | | Unmapped | [Bank 5B](./DWM_ROM_Maps/091_Bank_5B.md) |
+| `5A` | `0x168000` | `0x16BFFF` | 16KB  | Game Systems | Skill Effects | Unmapped | [Bank 5A](./DWM_ROM_Maps/090_Bank_5A.md) |
+| `5B` | `0x16C000` | `0x16FFFF` | 16KB  | Game Systems | | Skill Effects / Title Screen | [Bank 5B](./DWM_ROM_Maps/091_Bank_5B.md) |
 | `5C` | `0x170000` | `0x173FFF` | 16KB  | Unknown | | Unmapped | [Bank 5C](./DWM_ROM_Maps/092_Bank_5C.md) |
 | `5D` | `0x174000` | `0x177FFF` | 16KB  | Unknown | | Unmapped | [Bank 5D](./DWM_ROM_Maps/093_Bank_5D.md) |
 | `5E` | `0x178000` | `0x17BFFF` | 16KB  | Unknown | | Unmapped | [Bank 5E](./DWM_ROM_Maps/094_Bank_5E.md) |
 | `5F` | `0x17C000` | `0x17FFFF` | 16KB  | Unknown | | Unmapped | [Bank 5F](./DWM_ROM_Maps/095_Bank_5F.md) |
+
+[^1]: Definitely a small text table, but it's likely for UI. Won't count towards rest of the tables for now.
+
+---
 
 ### Banks `0x60` - `0x7F`: Empty/Garbage Banks
 
@@ -156,5 +160,64 @@ These Banks contain no useful data that is utilized in *Dragon Warrior Monsters*
 | `7E` | `0x1F8000` | `0x1FBFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7E](./DWM_ROM_Maps/126_Bank_7E.md)    |
 | `7F` | `0x1FC000` | `0x1FFFFF` | 16KB  | Free | Empty (`0x00` padding) | Mapped | [Bank 7F](./DWM_ROM_Maps/127_Bank_7F.md)    | 
 ---
+
+### Text Tables Overview
+*Simple breakdown of Text Table contents.*
+
+| Table | Bank ID | Entries | Contents | Status |
+| :---- | :------ | :------ | :------- | :----- |
+| `00` | `1B` | `6` | Tree Spirit Lore | Unmapped |
+| `01` | `1B` | `68` | General Dialogue (Class D / Early Game) | Mapped |
+| `02` | `1B` | `55` | General Dialogue (Class A / Library Info) | Mapped |
+| `03` | `1F` | `64` | General Dialogue (C Class / Mid-game) | Mapped |
+| `04` | `1F` | `32` | Starry Night Tournament | Mapped |
+| `05` | `1F` | `18` | Ending | Mapped |
+| `06` | `21` | `` | General Dialogue (Gate of Reflection) | Unmapped |
+| `07` | `22` | `` | System Dialogue (Core Facilities / Egg Mechanics) | Unmapped |
+| `08` | `3F` | `` | General Dialogue (Post-Game) | Unmapped |
+| `09` | `41` | `` | Debug Menu | Unmapped |
+| `0A` | `41` | `` | In-Game Room Name/ID (?) | Unmapped |
+| `0B` | `41` | `` | System Messages & UI | Unmapped |
+| `0C` | `41` | `` | Monster Random Name Filler | Unmapped |
+| `0D` | `41` | `` | Monster Family Symbols + 0xF0 Byte | Unmapped |
+| `0E` | `41` | `` | ??? | Unmapped |
+| `0F` | `41` | `` | Monster Name Table | Unmapped |
+| `10` | `41` | `` | Skill Name & EFFECT/ACTION(?), Default Monster Name | Unmapped |
+| `11` | `41` | `` | Item Name Table | Unmapped |
+| `12` | `41` | `` | Item Descriptions Table | Unmapped |
+| `13` | `41` | `` | Personalities | Unmapped |
+| `14` | `41` | `` | Battle UI / Post-Battle | Unmapped |
+| `15` | `41` | `` | Watabou Dis/Appears | Unmapped |
+| `16` | `41` | `` | Item Usage & Effects | Unmapped |
+| `17` | `41` | `` | Skill Usage & Effects | Unmapped |
+| `18` | `42` | `` | Intro / Super-Early Game Dialogue | Unmapped |
+| `19` | `43` | `` |  | Unmapped |
+| `1A` | `43` | `` |  | Unmapped |
+| `1B` | `44` | `` |  | Unmapped |
+| `1C` | `45` | `` |  | Unmapped |
+| `1D` | `46` | `` |  | Unmapped |
+| `1E` | `47` | `` |  | Unmapped |
+| `1F` | `48` | `` |  | Unmapped |
+| `20` | `49` | `` |  | Unmapped |
+| `21` | `4A` | `` |  | Unmapped |
+| `22` | `4A` | `` |  | Unmapped |
+| `23` | `4B` | `` |  | Unmapped |
+| `24` | `4C` | `` |  | Unmapped |
+| `25` | `4C` | `` |  | Unmapped |
+| `26` | `4C` | `` |  | Unmapped |
+| `27` | `4C` | `` |  | Unmapped |
+| `28` | `4C` | `` |  | Unmapped |
+| `29` | `4C` | `` |  | Unmapped |
+| `2A` | `4C` | `` |  | Unmapped |
+| `2B` | `4C` | `` |  | Unmapped |
+| `2C` | `4D` | `` |  | Unmapped |
+| `2D` | `4D` | `` |  | Unmapped |
+| `2E` | `4E` | `` |  | Unmapped |
+| `2F` | `4F` | `` |  | Unmapped |
+| `30` | `4F` | `` |  | Unmapped |
+| `31` | `56` | `` | Debug Stuff | Unmapped |
+| `32` | `56` | `` | Skill Descriptions | Unmapped |
+| `33` | `59` | `` | Unused Tutorial | Unmapped |
+
 © 2026 Jeahnoh. Licensed under CC BY-NC 4.0. Attribution Required.
 See LICENSE.md in the repository root for full non-commercial terms.
