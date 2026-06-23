@@ -7,7 +7,7 @@
 **Bank Type:** Swappable  
 **Category:** [Graphics / Text / Code / Audio / Unknown]  
 **Summary:** [A brief 1-2 sentence description of what this bank does.]
-contains charmap renders, and soem dialogue. Weird pointer table structure, and a repeating pointer. no pointer to the pointer table.
+contains charmap renders, and soem dialogue. Weird pointer table structure, and a repeating pointer. no pointer to the pointer table so I don't know how it knows where to find the Master Pointer Table.
 ---
 
 ## Memory Map (Granular)
