@@ -6,30 +6,43 @@
 **Global Hex Range:** `0x6C000` - `0x6FFFF`  
 **Bank Type:** Swappable  
 **Category:** Text   
-**Summary:** This bank includes the first three Dialogue Data Tables in the game, and three standard Assembly subroutines to call text box functions.
+**Summary:** This bank includes the first three Text Data Tables in the game, and three standard Assembly subroutines to call text box functions.
 
 ---
 
 <a id="top"></a>
-## Memory Map (Granular)
+## Master Memory Map (General Overview)
 *Breakdown of the specific block sectors within this bank.*
+
+| Offset (Local) | Offset (Global) | Length | Description |
+| :------------- | :-------------- | :----- | :---------- |
+| `0x4000` | `0x6C000` | `0x126` | [Bank Meta Table](#meta) |
+| `0x4126` | `0x6C126` | `0x1E8` | [Text Table](#data-1) `0x00` - Tree Spirit Lore |
+| `0x430E` | `0x6C30E` | `0x1829` | [Text Table](#data-2) `0x01` - General Dialogue (Class D / Early Game) |
+| `0x5B37` | `0x6DB37` | `0x1A46` | [Text Table](#data-3) `0x02` - General Dialogue (Class A / Library Info) |
+| `0x757D` | `0x6F57D` | `0xA83` | `0x00` padding (Safe Free Space) |
+
+---
+
+<a id="meta"></a>
+## Bank Meta Table
+*Breakdown of the blocks within this bank's Meta Table.*
 
 | Offset (Local) | Offset (Global) | Length | Description |
 | :------------- | :-------------- | :----- | :---------- |
 | `0x4000` | `0x6C000` | `0x1` | Bank ID Header (`0x1B`) |
 | `0x4001` | `0x6C001` | `0x6` | Jump Table (3 Assembly Subroutines) |
 | `0x4007` | `0x6C007` | `0x6` | Master Pointer Table (3 Data Tables) |
-| `0x400D` | `0x6C00D` | `0xC` | [Data Pointer Table](#data-1) (5 Dialogue Pointers) |
+| `0x400D` | `0x6C00D` | `0xC` | [Data Pointer Table](#data-1) (6 Dialogue Pointers) |
 | `0x4019` | `0x6C019` | `0x88` | [Data Pointer Table](#data-2) (68 Dialogue Pointers) |
 | `0x40A1` | `0x6C0A1` | `0x70` | [Data Pointer Table](#data-3) (55 Dialogue Pointers) |
 | `0x4111` | `0x6C111` | `0x1D` | [Assembly Subroutine 1](#subroutine-1) |
 | `0x4118` | `0x6C118` | `0x1D` | [Assembly Subroutine 2](#subroutine-2) |
 | `0x411F` | `0x6C11F` | `0x1D` | [Assembly Subroutine 3](#subroutine-3) |
-| `0x757D` | `0x6F57D` | `0xA83` | `0x00` padding (Safe Free Space) |
 
 ---
 
-### Raw Memory Map
+### Raw Meta Table Map
 *Visual breakdown of the engine's memory routing. Refer to the Master ROM Map for structural notation key.*
 
 ```hex
@@ -60,9 +73,48 @@ Hex View  00 01 02 03 04 05 06 07  08 09 0A 0B 0C 0D 0E 0F
 
 ---
 
+## Subroutines
+These three local assembly routines act as standard wrappers. They feed the data pointers from this bank into the game's core execution library in Bank 0 to parse and display the dialogue on the screen.
+
+<a id="subroutine-1"></a>
+### Subroutine 1 (`0x4111`) - The Memory State Setter
+*This simple wrapper routine passes the Master Pointer Table to the engine's core library in Bank 0 (`0x05B6`). The Bank 0 routine then sets up the active Work RAM (WRAM) variables needed to prepare the engine to parse text.*
+
+```assembly
+11 07 40    LD DE, $4007      ; Loads Master Pointer Table to DE
+CD B6 05    CALL   $05B6      ; Calls Bank 0 Memory Prep Routine
+C9          RET               ; Return
+```
+
+[⬆️ Back to Top](#top)
+
+<a id="subroutine-2"></a>
+### Subroutine 2 (`0x4118`) - The Text String Copier
+*This simple wrapper routine passes the Master Pointer Table to the engine's core library in Bank 0 (`0x05F6`), which triggers a loop that copies the text bytes into Work RAM (WRAM) until it hits the `[End]` (`0xF0`) control code.* 
+
+```assembly
+11 07 40    LD DE, $4007      ; Loads Master Pointer Table to DE
+CD F6 05    CALL   $05F6      ; Calls Bank 0 String Copy Loop
+C9          RET               ; Return
+```
+[⬆️ Back to Top](#top)
+
+<a id="subroutine-3"></a>
+### Subroutine 3 (`0x411F`) - The Execution & Wait Wrapper
+*This simple wrapper routine first calls Subroutine 1 to prep the memory, then calls a Bank 0 system function (`0x0609`) which flags the UI to draw the text box and loops until the player presses the 'A' button to clear it.*
+
+```assembly
+CD 11 41    CALL $4111        ; Calls Subroutine 1 (Memory Prep)
+CD 09 06    CALL $0609        ; Calls Bank 0 Wait/Draw Loop
+C9          RET               ; Return
+```
+[⬆️ Back to Top](#top)
+
+---
+
 <a id="data-1"></a>
 ## Dialogue Sector: Text Table `0x00` - Tree Spirit Lore
-*Breakdown of the 5 dialogue sequences defined by the Data Pointer Table.*
+*Breakdown of the 6 dialogue sequences defined by the Data Pointer Table.*
 
 | Index | Pointer (LE) | Start (Local) | Length | String Key | Category | Audio / Flags | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -220,45 +272,6 @@ Hex View  00 01 02 03 04 05 06 07  08 09 0A 0B 0C 0D 0E 0F
 | `37` | `CC 74` | `0x74CC` | `0xB1` | `VOICE_82` | UNCHECKED | None | Book hint on Mudron breeding. |
 
 
-[⬆️ Back to Top](#top)
-
----
-
-## Subroutines
-These three local assembly routines act as standard wrappers. They feed the data pointers from this bank into the game's core execution library in Bank 0 to parse and display the dialogue on the screen.
-
-<a id="subroutine-1"></a>
-### Subroutine 1 (`0x4111`) - The Memory State Setter
-*This simple wrapper routine passes the Master Pointer Table to the engine's core library in Bank 0 (`0x05B6`). The Bank 0 routine then sets up the active Work RAM (WRAM) variables needed to prepare the engine to parse text.*
-
-```assembly
-11 07 40    LD DE, $4007      ; Loads Master Pointer Table to DE
-CD B6 05    CALL   $05B6      ; Calls Bank 0 Memory Prep Routine
-C9          RET               ; Return
-```
-
-[⬆️ Back to Top](#top)
-
-<a id="subroutine-2"></a>
-### Subroutine 2 (`0x4118`) - The Text String Copier
-*This simple wrapper routine passes the Master Pointer Table to the engine's core library in Bank 0 (`0x05F6`), which triggers a loop that copies the text bytes into Work RAM (WRAM) until it hits the `[End]` (`0xF0`) control code.* 
-
-```assembly
-11 07 40    LD DE, $4007      ; Loads Master Pointer Table to DE
-CD F6 05    CALL   $05F6      ; Calls Bank 0 String Copy Loop
-C9          RET               ; Return
-```
-[⬆️ Back to Top](#top)
-
-<a id="subroutine-3"></a>
-### Subroutine 3 (`0x411F`) - The Execution & Wait Wrapper
-*This simple wrapper routine first calls Subroutine 1 to prep the memory, then calls a Bank 0 system function (`0x0609`) which flags the UI to draw the text box and loops until the player presses the 'A' button to clear it.*
-
-```assembly
-CD 11 41    CALL $4111        ; Calls Subroutine 1 (Memory Prep)
-CD 09 06    CALL $0609        ; Calls Bank 0 Wait/Draw Loop
-C9          RET               ; Return
-```
 [⬆️ Back to Top](#top)
 
 ---

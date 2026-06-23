@@ -41,11 +41,11 @@
 | `18` | `0x60000` | `0x63FFF` | 16KB  | Unknown | | Unmapped | [Bank 18](./DWM_ROM_Maps/024_Bank_18.md) |
 | `19` | `0x64000` | `0x67FFF` | 16KB  | Unknown | | Unmapped | [Bank 19](./DWM_ROM_Maps/025_Bank_19.md) |
 | `1A` | `0x68000` | `0x6BFFF` | 16KB  | Unknown | | Unmapped | [Bank 1A](./DWM_ROM_Maps/026_Bank_1A.md) |
-| `1B` | `0x6C000` | `0x6FFFF` | 16KB  | Text | | Pointer Tables Marked | [Bank 1B](./DWM_ROM_Maps/027_Bank_1B.md) |
+| `1B` | `0x6C000` | `0x6FFFF` | 16KB  | Text | Tables `0x00` - `0x02` | Mapped, Needs Name Checks | [Bank 1B](./DWM_ROM_Maps/027_Bank_1B.md) |
 | `1C` | `0x70000` | `0x73FFF` | 16KB  | Audio | | ON HOLD | [Bank 1C](./DWM_ROM_Maps/028_Bank_1C.md) |
 | `1D` | `0x74000` | `0x77FFF` | 16KB  | Audio | | ON HOLD | [Bank 1D](./DWM_ROM_Maps/029_Bank_1D.md) |
 | `1E` | `0x78000` | `0x7BFFF` | 16KB  | Audio | | ON HOLD | [Bank 1E](./DWM_ROM_Maps/030_Bank_1E.md) |
-| `1F` | `0x7C000` | `0x7FFFF` | 16KB  | Text | | Pointer Tables Marked | [Bank 1F](./DWM_ROM_Maps/031_Bank_1F.md) |
+| `1F` | `0x7C000` | `0x7FFFF` | 16KB  | Text | Tables `0x03` - `0x05` | Mapped, Needs Name Checks| [Bank 1F](./DWM_ROM_Maps/031_Bank_1F.md) |
 | `20` | `0x80000` | `0x83FFF` | 16KB  | Unknown | | Unmapped | [Bank 20](./DWM_ROM_Maps/032_Bank_20.md) |
 | `21` | `0x84000` | `0x87FFF` | 16KB  | Text | | Pointer Tables Marked | [Bank 21](./DWM_ROM_Maps/033_Bank_21.md) |
 | `22` | `0x88000` | `0x8BFFF` | 16KB  | Text | | Pointer Tables Marked | [Bank 22](./DWM_ROM_Maps/034_Bank_22.md) |
